@@ -19,3 +19,7 @@ class OrdersRepository(Protocol):
 
     def get(self, order_id: str) -> Order | None:
         ...
+
+    def count(self) -> int:
+        """How many orders are stored. New port method — every adapter must implement."""
+        ...
