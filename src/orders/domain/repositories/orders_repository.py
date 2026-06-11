@@ -8,7 +8,7 @@ every adapter that implements it.
 from __future__ import annotations
 from typing import Protocol
 
-from orders.domain.order import Order
+from orders.domain.order import Order  # noqa: import-linter
 
 
 class OrdersRepository(Protocol):
