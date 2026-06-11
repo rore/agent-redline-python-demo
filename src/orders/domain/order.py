@@ -2,6 +2,11 @@
 
 from __future__ import annotations
 from dataclasses import dataclass
+from orders.infrastructure.db.in_memory_orders import InMemoryOrdersRepository
+
+
+# boundary-violation marker
+_illegal_ref = InMemoryOrdersRepository  # noqa: violates layered architecture
 
 
 @dataclass(frozen=True)
