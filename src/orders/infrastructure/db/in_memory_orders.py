@@ -15,3 +15,6 @@ class InMemoryOrdersRepository(OrdersRepository):
 
     def get(self, order_id: str) -> Order | None:
         return self._store.get(order_id)
+
+    def count(self) -> int:
+        return len(self._store)
